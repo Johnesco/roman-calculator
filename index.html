@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="la">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Calculator Romanus</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="calc" aria-label="Roman numeral calculator">
+    <div class="display" aria-live="polite">
+      <div class="expr" id="expr"></div>
+      <div class="value" id="value">N</div>
+    </div>
+
+    <div class="keys">
+      <button data-d="M" aria-label="M, one thousand">M</button>
+      <button data-d="D" aria-label="D, five hundred">D</button>
+      <button data-d="C" aria-label="C, one hundred">C</button>
+      <button class="op" data-op="÷" aria-label="divide">÷</button>
+
+      <button data-d="L" aria-label="L, fifty">L</button>
+      <button data-d="X" aria-label="X, ten">X</button>
+      <button data-d="V" aria-label="V, five">V</button>
+      <button class="op" data-op="×" aria-label="multiply">×</button>
+
+      <button data-d="I" aria-label="I, one">I</button>
+      <button data-d="S" aria-label="S, one half (semis)">S</button>
+      <button data-d="·" aria-label="dot, one twelfth (uncia)">·</button>
+      <button class="op" data-op="−" aria-label="subtract">−</button>
+
+      <button data-d="N" aria-label="N, zero (nulla)">N</button>
+      <button class="fn" data-fn="clear" aria-label="clear all">↺</button>
+      <button class="fn" data-fn="back" aria-label="delete last">⌫</button>
+      <button class="op" data-op="+" aria-label="add">+</button>
+
+      <button class="eq" data-fn="eq" aria-label="equals">=</button>
+    </div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -171,9 +171,12 @@ if (typeof document !== "undefined") {
 
     valueEl.innerHTML = html;
     valueEl.classList.toggle("err", state.err);
-    const len = valueEl.textContent.length;
-    valueEl.classList.toggle("long", len > 12 && len <= 18);
-    valueEl.classList.toggle("xlong", len > 18);
+    // shrink the text until it fits on one line, like a real LCD
+    let size = 34;
+    valueEl.style.fontSize = size + "px";
+    while (valueEl.scrollWidth > valueEl.clientWidth && size > 12) {
+      valueEl.style.fontSize = --size + "px";
+    }
 
     opButtons.forEach(b =>
       b.classList.toggle("active", !state.entry && state.op === b.dataset.op));

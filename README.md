@@ -1,6 +1,6 @@
 # Calculator Romanus
 
-A working calculator that uses **only Roman numerals**, both on the display and on the buttons. Plain HTML, CSS and JS, with no build step.
+A working calculator that uses **only Roman numerals**, both on the display and on the buttons. Plain HTML, CSS and JS, with no build step. The CSS is inlined in `index.html` so the layout can never load without its styles.
 
 **Live:** https://johnesco.github.io/roman-calculator/
 
